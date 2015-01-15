@@ -34,7 +34,11 @@ end
 
 gabe=Blog.new
 post1=Post.new("Blog post number 1", "hella content")
+post2=Post.new("Second blog post", "more content")
+post3=Post.new("Third", "finished")
 gabe.add(post1)
+gabe.add(post2)
+gabe.add(post3)
 gabe.post_content
 
 
