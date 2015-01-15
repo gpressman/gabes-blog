@@ -26,15 +26,22 @@ class Post
 		@title=title
 		@text=text	
 	end
+
+	def pretty_time
+		now =  Time.new
+
+		now.strftime("%m-%d-%Y at %I:%M%p")
+	end
+
 	def to_s
-		return "#{@title}\n*******************************************#\n#{@text} date: \n#{Time.new}\n\n-------------------------------------\n"
+		return "#{@title}\n*******************************************#\n#{@text} \nDate: #{pretty_time}\n\n-------------------------------------\n"
 	end
 end
 
 class Sponsored <Post
 
 def to_s
-	return "*******#{@title}*******\n*******************************************#\n#{@text} date: \n#{Time.new}\n\n-------------------------------------\n"
+	return "*******#{@title}*******\n*******************************************#\n#{@text} \nDate: #{pretty_time}\n\n-------------------------------------\n"
 	
 end
 
